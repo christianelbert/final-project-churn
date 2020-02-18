@@ -27,7 +27,7 @@ In this web application, 4 html pages will be shown.
 2. Stats
     After user clicked Stats, user will be shown current statistics from the company. This includes current churning rate, average charges and subscription's top 5 state.
 
-    ![Stats](images/stats.png)
+    ![Stats](images/stats1.png)
 
 3. Predict
     This page will show which data can be used to make prediction. Data that will be used to make prediction includes monthly charges, customer service calls made, date join and US' state. 
