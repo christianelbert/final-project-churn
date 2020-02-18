@@ -8,7 +8,7 @@
 
 <hr>
 What is churning? Churning is the rate at which customers stop doing business with an entity.
-<br>
+<br><br>
 Customer churning is a major issue for many businesses, telecom industry being no exception. This issue then will lead to company's financial loss and even reputation wise.
 
 There are many factors that contribute to churning in telecom industry, including customer service issue, product issue or competitors. Having the ability to predict churn will give company a better idea in forecasting future revenue.
