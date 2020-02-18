@@ -8,7 +8,7 @@
 
 <hr>
 What is churning? Churning is the rate at which customers stop doing business with an entity.
-
+<br>
 Customer churning is a major issue for many businesses, telecom industry being no exception. This issue then will lead to company's financial loss and even reputation wise.
 
 There are many factors that contribute to churning in telecom industry, including customer service issue, product issue or competitors. Having the ability to predict churn will give company a better idea in forecasting future revenue.
@@ -19,17 +19,17 @@ The dataset used for this project is __["Telecom Churning"](https://www.kaggle.c
 
 In this web application, 4 html pages will be shown.
 
-1. Home
+1. Home <br>
     This is the first page shown when accessing web apps. In this page, you can choose between two options, Stats (view current statistics) and Predict (user will input data to make prediction).
 
     ![Home](images/home.png)
 
-2. Stats
+2. Stats <br>
     After user clicked Stats, user will be shown current statistics from the company. This includes current churning rate, average charges and subscription's top 5 state.
 
     ![Stats](images/stats1.png)
 
-3. Predict
+3. Predict <br>
     This page will show which data can be used to make prediction. Data that will be used to make prediction includes monthly charges, customer service calls made, date join and US' state. 
     
     Data inputted then will be used to predict churning through machine learning model. 
@@ -37,7 +37,7 @@ In this web application, 4 html pages will be shown.
     ![Predict](images/predict.png)
     ![Predict_1](images/predict1.png)
 
-4. Churn
+4. Churn <br>
     This is the final page that will show prediction result. In this page, user can see the churning probabilty percentage, visualize in a graph and table comparing user's information to the average in a particular US' state.
 
     ![Churn](images/churn.png)
