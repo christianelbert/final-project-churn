@@ -7,7 +7,7 @@
 #### By: Christian Elbert
 
 <hr>
-What is churning? Churning is the rate at which customers stop doing business with an entity
+What is churning? Churning is the rate at which customers stop doing business with an entity.
 
 Customer churning is a major issue for many businesses, telecom industry being no exception. This issue then will lead to company's financial loss and even reputation wise.
 
