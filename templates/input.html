@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churning</title>
+</head>
+<body style="background-color: lightblue; color: darkblue; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    <center>
+    <h1>Churning prediction</h1>
+    <table>
+        <form method="POST" action = "http://127.0.0.1:5000/churn">
+        <tr>
+            <td>
+                State:
+            </td>
+            <td>
+                <select name="state">
+                    <option value="AK">Alaska</option><option value="AL">Alabama</option><option value="AR">Arkansas</option><option value="AZ">Arizona</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option>
+                    <option value="DC">District of Columbia</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="IA">Iowa</option>
+                    <option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option>
+                    <option value="MA">Massachusetts</option><option value="MD">Maryland</option><option value="ME">Maine</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MO">Missouri</option><option value="MS">Mississippi</option>
+                    <option value="MT">Montana</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="NE">Nebraska</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option>
+                    <option value="NV">Nevada</option><option value="NY">New York</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option>
+                    <option value="VA">Virginia</option><option value="VT">Vermont</option><option value="WA">Washington</option><option value="WI">Wisconsin</option><option value="WV">West Virginia</option><option value="WY">Wyoming</option>
+                </select>        
+            </td>
+        </tr>
+        <tr>
+            <td>International plan:</td>
+            <td><select name="intl_plan">
+                <option value="Yes">Yes</option><option value="No">No</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Join membership: </td>
+            <td><input type="month"  name="length" style="height:20px;width:135px" placeholder="length (month)" required></td>
+        </tr>
+        <tr>
+            <td>Voicemail:</td>
+            <td><input type="number" step="any" min="0" name="voicemail" style="height:20px;width:135px" placeholder="voicemall per month" required></td>
+        </tr>
+        <tr>
+            <td>Day calls:</td>
+            <td><input type="number" step="any" min="0" name="daycall" style="height:20px;width:135px" placeholder="monthly day calls" required></td>
+        </tr>
+        <tr>
+            <td>Day charge:</td>
+            <td><input type="number" step="0.01" min="0" name="daycharge" style="height:20px;width:135px" placeholder="monthly day charge" required></td>
+        </tr>
+        <tr>
+            <td>Evening calls:</td>
+            <td><input type="number" step="any" min="0" name="evecall" style="height:20px;width:135px" placeholder="monthly evening call" required></td>
+        </tr>
+        <tr>
+            <td>Evening charge:</td>
+            <td><input type="number" step="0.01" min="0" name="evecharge" style="height:20px;width:135px" placeholder="monthly evening charge" required></td>
+        </tr>
+        <tr>
+            <td>Night calls:</td>
+            <td><input type="number" step="any" min="0" name="nightcall" style="height:20px;width:135px" placeholder="monthly night call" required></td>
+        </tr>
+        <tr>
+            <td>Night charge:</td>
+            <td><input type="number" step="0.01" min="0" name="nightcharge" style="height:20px;width:135px" placeholder="monthly night charge" required></td>
+        </tr>
+        <tr>
+            <td>Int'l calls:</td>
+            <td><input type="number" step="any" min="0" name="intcall" style="height:20px;width:135px" placeholder="monthly international call" required></td>
+        </tr>
+        <tr>
+            <td>Int'l charge:</td>
+            <td><input type="number" step="0.01" min="0" name="intcharge" style="height:20px;width:135px" placeholder="monthly international charge" required></td>
+        </tr>
+        <tr>
+            <td>CS calls:</td>
+            <td><input type="number" step="any" min="0" name="cscall" style="height:20px;width:135px" placeholder="monthly customer service call" required></td>
+        </tr>
+    </table><br>
+        <button style="height:45px;width:300px;font-size: 20px;text-align: center;line-height: 20px;background-color: darkblue; color: cornsilk;">Predict !</button>
+    </form>
+
+</center>
+</body>
+</html>

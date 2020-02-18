@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    
+</head>
+<body style="background-color: lightblue; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+<center>
+    <h2 style="color: darkblue;">Telecom Customer Statistics</h2>
+    <table style="width: 1000px;text-align: center;padding: 1px; background-color: white;">
+        <tr style="background-color: darkblue; color: whitesmoke;">
+            <th colspan="2">Churning Percentage</th>
+            <th>Average Charge per Month ($)</th>
+            <th>Top 5 Important Factors</th>
+        </tr>
+        <tr>
+            <td style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;"><b style="font-size: x-large;">{{customer['total']}}</b><br>Customers</td>
+            <td rowspan="2"><center><div id="stats_2" class="stats_2" style="height: 300px;width: 300px;"></div></center></td>
+            <td rowspan="2" style="font-size: 18px;"><center>
+                {% for table in tables %}
+                {{table|safe}}
+                {%endfor%}
+            </center></td>
+            <td rowspan="2"><center><div id="stats_1" class="stats_1" style="height: 300px; width: 300px;"></div></center></td>
+        </tr>
+        <tr>
+            <td style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><b style="font-size: x-large;">{{customer['churn']}}</b><br>Churn</td>
+            <td>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table style="width: 1000px; text-align: center;background-color: white; height: 300px;">
+        <tr style="background-color: darkblue;color: whitesmoke;">
+            <th>Top 5 State Membership</th>
+            <th>Top 5 State Churning</th>
+        </tr>
+        <tr>
+            <td><center><div id="state_stats_1" class="state_stats_1" style="width: 400px;height: 300px;"></div></center></td>
+            <td><center><div id="state_stats_2" class="state_stats_2" style="width: 400px;height: 300px;"></div></center></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <!-- <td colspan="2"><center><div id="state_stats_1" class="state_stats_1" style="width: fit-content;"></div></center></td> -->
+            <td></td>
+        </tr>
+
+        <tr>
+
+        </tr>
+    </table>
+    <br>
+    <table style="width: 1000px; background-color: white;">
+        <tr style="background-color: darkblue; color: whitesmoke;"><th colspan="2">International plan</th></tr>
+        <tr style="background-color: darkblue; color: whitesmoke;">
+            <th>With international plan</th>
+            <th>Without international plan</th>
+        </tr>
+        <tr>
+            <td><div id="pie3" class="pie3" style="height: 300px;width: 500px;"></div></td>
+            <td><div id="pie4" class="pie4" style="height: 300px;width: 500px;"></div></td>
+        </tr>
+    </table>
+    <br>
+    <form action = "http://127.0.0.1:5000/">
+        <button style="height:45px;width:300px;font-size: 20px;text-align: center;line-height: 20px; background-color: darkblue; color:cornsilk;">🏠Home</button>
+    </form>
+    
+    
+</center>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script type="text/javascript">
+    
+    var visual = {{ stats_1 | safe }} 
+    Plotly.plot('stats_1',visual,{})
+
+    var visual = {{ stats_2 | safe }} 
+    Plotly.plot('stats_2',visual,{})
+
+    var visual = {{ state_stats_1 | safe }} 
+    Plotly.plot('state_stats_1',visual,{})
+
+    var visual = {{ state_stats_2 | safe }} 
+    Plotly.plot('state_stats_2',visual,{})
+
+    var visual = {{ pie3 | safe }} 
+    Plotly.plot('pie3',visual,{})
+
+    var visual = {{ pie4 | safe }} 
+    Plotly.plot('pie4',visual,{})
+</script>
+</html>
