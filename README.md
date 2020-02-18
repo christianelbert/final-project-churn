@@ -1,7 +1,5 @@
 # JCDS 07 Final Project
 
-![purwadhikaLogo](https://d1ah56qj523gwb.cloudfront.net/uploads/organizations/logos/1538557444-kcgv11HXelvcOnlyrGcEpfwAf6hbPMhC.png)
-
 # Telecom Customer Churning Classification
 
 #### By: Christian Elbert
