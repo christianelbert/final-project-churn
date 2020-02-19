@@ -87,7 +87,7 @@ def churn():
         return render_template('churn.html',proba = churn_proba, data = body,churnplot=graphJson,predict=churn,max=proba_max,data1=[dataframe.to_html(classes='data')])
 
 if __name__ == '__main__':
-    model = joblib.load('randomforest')
+    model = joblib.load('model')
     df_full = pd.read_csv('full.csv')
     df1 = pd.read_csv('clean_train.csv')
     full = pd.read_csv('clean_full.csv')
